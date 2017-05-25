@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "precise64" # replace with "precise" if running 32-bit.
   config.vm.box_url = "http://files.vagrantup.com/precise64.box" # replace with "precise32" if running 32-bit.
 
-  config.vm.network "forwarded_port", guest: 5858, host: 5858, auto_correct: true
+  config.vm.network "forwarded_port", guest: 27017, host: 27017, auto_correct: true
   config.vm.provision :shell, :path => "install.sh"
   config.vm.provider "virtualbox" do |v|
     v.cpus = 1
